@@ -12,5 +12,15 @@
     },
     "config": {
         "bin-dir": "bin"
+    },
+    "scripts": {
+	"confDrupalcs": "bin/phpcs --config-set default_standard Drupal",
+	"post-update-cmd": [
+	    "@confDrupalcs"
+	],
+	"post-install-cmd": [
+	    "@confDrupalcs"
+	]
     }
+
 }
