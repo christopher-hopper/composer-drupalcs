@@ -1,5 +1,9 @@
 {
+    "name": "chop/drupalcs",
     "type": "metapackage",
+    "description": "Installs and configures Drupal coding standards checks for PHP projects.",
+    "keywords": ["standards", "drupal", "code sniffer"],
+    "homepage": "https://github.com/christopher-hopper/composer-drupalcs",
     "repositories": [
         {
             "type": "composer",
@@ -25,5 +29,4 @@
 	    "@confDefaultStandard"
 	]
     }
-
 }
