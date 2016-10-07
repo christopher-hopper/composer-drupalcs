@@ -14,12 +14,15 @@
         "bin-dir": "bin"
     },
     "scripts": {
-	"confDrupalcs": "bin/phpcs --config-set default_standard Drupal",
+	"confInstalledPaths": "bin/phpcs --config-set installed_paths \"$(pwd)/vendor/drupal/coder/coder_sniffer\"",
+	"confDefaultStandard": "bin/phpcs --config-set default_standard Drupal",
 	"post-update-cmd": [
-	    "@confDrupalcs"
+	    "@confInstalledPaths",
+	    "@confDefaultStandard"
 	],
 	"post-install-cmd": [
-	    "@confDrupalcs"
+	    "@confInstalledPaths",
+	    "@confDefaultStandard"
 	]
     }
 
